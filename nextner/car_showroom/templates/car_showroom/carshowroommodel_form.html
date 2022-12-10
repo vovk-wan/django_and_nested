@@ -1,0 +1,8 @@
+<h1>New Сar Showroom</h1>
+
+<form action="{% url 'car_showrooms-new' %}" method="POST">
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="Save" />
+
+</form>

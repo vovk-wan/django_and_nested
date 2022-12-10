@@ -1,0 +1,18 @@
+<h1>Edit Cars</h1>
+
+<form action="{% url 'cars-edit' pk=carshowroommodel.id %}" method="POST">
+{% csrf_token %}
+{{ form.management_form }}
+{% for carmodel in form %}
+{{ carmodel.as_p }}
+
+{{ carmodel.nested.management_form }}
+{% for carcspecificationmodel in carmodel.nested %}
+{{ carcspecificationmodel.as_p }}
+{% endfor %}
+
+{% endfor %}
+
+<input type="submit" value="Save" />
+
+</form>

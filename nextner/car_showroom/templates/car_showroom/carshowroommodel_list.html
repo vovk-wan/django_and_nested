@@ -1,0 +1,10 @@
+<h1>Showrooms</h1>
+
+<ul>
+{% for showroom in carshowroommodel_list %}
+  <li><a href="{% url 'cars-edit' pk=showroom.id %}">
+      {{ showroom.description }}</a></li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'car_showrooms-new' %}">new block</a>
