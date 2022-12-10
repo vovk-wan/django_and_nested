@@ -1,12 +1,6 @@
-from django.urls import reverse
 from django.forms.models import inlineformset_factory
-from django.views.generic import (
-    ListView,
-    CreateView,
-    UpdateView,
-)
-# reverse
-
+from django.urls import reverse
+from django.views.generic import CreateView, ListView, UpdateView
 from nested_formset import nestedformset_factory
 
 from car_showroom import models

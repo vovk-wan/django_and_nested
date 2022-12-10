@@ -4,6 +4,7 @@ from django.db import models
 
 class CarShowRoomModel(models.Model):
     """Модель автосалона"""
+
     name = models.CharField(max_length=250, verbose_name='Название')
     address = models.TextField(verbose_name='Адрес')
     email = models.EmailField(verbose_name='Email')
@@ -20,6 +21,7 @@ class CarShowRoomModel(models.Model):
 
 class CarModel(models.Model):
     """Модель автомобиля"""
+
     name = models.CharField(max_length=250, verbose_name='Название')
     car_showroom = models.ForeignKey(
         CarShowRoomModel,
@@ -39,6 +41,7 @@ class CarModel(models.Model):
 
 class CarSpecificationModel(models.Model):
     """Модель характеристик"""
+
     name = models.CharField(
         max_length=150, verbose_name='Название')
     amount = models.IntegerField(verbose_name='Количество')
